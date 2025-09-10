@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 
 import * as SelectPrimitive from "@radix-ui/react-select";
-import { tv } from "@suyank/styles";
+import { tv } from "@suyanksaraswat/styles";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 import { Text } from "./text";

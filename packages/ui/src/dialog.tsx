@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { tv } from "@suyank/styles";
+import { tv } from "@suyanksaraswat/styles";
 import { X } from "lucide-react";
 
 export const DialogStyles = {

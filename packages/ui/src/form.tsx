@@ -13,7 +13,7 @@ import {
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Slot } from "@radix-ui/react-slot";
-import { cn } from "@suyank/styles";
+import { cn } from "@suyanksaraswat/styles";
 import { type Schema as ZodSchema } from "zod";
 
 import { Label, type LabelProps } from "./label";

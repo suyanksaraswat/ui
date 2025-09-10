@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@suyank/ui/button";
-import { Dialog } from "@suyank/ui/dialog";
-import { Label } from "@suyank/ui/label";
-import { TextField } from "@suyank/ui/textfield";
+import { Button } from "@suyanksaraswat/ui/button";
+import { Dialog } from "@suyanksaraswat/ui/dialog";
+import { Label } from "@suyanksaraswat/ui/label";
+import { TextField } from "@suyanksaraswat/ui/textfield";
 
 type DialogProps = React.ComponentPropsWithoutRef<typeof Dialog>;
 

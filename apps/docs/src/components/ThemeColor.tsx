@@ -1,4 +1,4 @@
-import { cn } from "@suyank/styles";
+import { cn } from "@suyanksaraswat/styles";
 
 import { hslToColors } from "~/utils/colors";
 

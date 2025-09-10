@@ -2,8 +2,8 @@
 import { useState } from "react";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import { Badge } from "@suyank/ui/badge";
-import { Checkbox } from "@suyank/ui/checkbox";
+import { Badge } from "@suyanksaraswat/ui/badge";
+import { Checkbox } from "@suyanksaraswat/ui/checkbox";
 import {
   DataTable,
   flexRender,
@@ -18,7 +18,7 @@ import {
   getFacetedRowModel,
   getFacetedUniqueValues,
   type ColumnDef,
-} from "@suyank/ui/data-table";
+} from "@suyanksaraswat/ui/data-table";
 
 import { DataTableRowActions } from "~/components/DataTableRowAction";
 import { labels, priorities, statuses } from "~/data/data";

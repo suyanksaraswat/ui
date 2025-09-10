@@ -1,4 +1,4 @@
-# @suyank/styles
+# @suyanksaraswat/styles
 
 ## 1.2.0
 

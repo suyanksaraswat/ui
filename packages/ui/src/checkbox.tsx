@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 
 import { Root, Indicator } from "@radix-ui/react-checkbox";
-import { tv } from "@suyank/styles";
+import { tv } from "@suyanksaraswat/styles";
 import { Check } from "lucide-react";
 
 export type { CheckboxProps } from "@radix-ui/react-checkbox";

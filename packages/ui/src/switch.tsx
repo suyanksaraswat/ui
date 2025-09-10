@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 
 import { Root, Thumb } from "@radix-ui/react-switch";
-import { tv } from "@suyank/styles";
+import { tv } from "@suyanksaraswat/styles";
 
 export const SwitchStyles = {
   Root: tv({

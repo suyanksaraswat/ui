@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Label } from "@suyank/ui/label";
-import { TextField, type TextFieldInputProps } from "@suyank/ui/textfield";
+import { Label } from "@suyanksaraswat/ui/label";
+import {
+  TextField,
+  type TextFieldInputProps,
+} from "@suyanksaraswat/ui/textfield";
 import { Search } from "lucide-react";
 
 const meta: Meta<TextFieldInputProps> = {

@@ -1,4 +1,7 @@
 {
-  "extends": ["@suyank/eslint-config/react", "@suyank/eslint-config/tailwind"],
+  "extends": [
+    "@suyanksaraswat/eslint-config/react",
+    "@suyanksaraswat/eslint-config/tailwind"
+  ],
   "ignorePatterns": ["dist"]
 }

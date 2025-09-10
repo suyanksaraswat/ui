@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-import { tv } from "@suyank/styles";
+import { tv } from "@suyanksaraswat/styles";
 
 export const CardStyles = {
   Root: tv({

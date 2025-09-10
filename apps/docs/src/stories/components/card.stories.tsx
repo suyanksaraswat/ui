@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@suyank/ui/button";
-import { Card, type CardProps } from "@suyank/ui/card";
-import { Label } from "@suyank/ui/label";
-import { Select } from "@suyank/ui/select";
-import { TextField } from "@suyank/ui/textfield";
+import { Button } from "@suyanksaraswat/ui/button";
+import { Card, type CardProps } from "@suyanksaraswat/ui/card";
+import { Label } from "@suyanksaraswat/ui/label";
+import { Select } from "@suyanksaraswat/ui/select";
+import { TextField } from "@suyanksaraswat/ui/textfield";
 
 const meta: Meta<CardProps> = {
   title: "Components/Card",

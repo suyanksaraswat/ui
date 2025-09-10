@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@suyank/ui/button";
-import { Form, useForm } from "@suyank/ui/form";
-import { TextField } from "@suyank/ui/textfield";
-import { Toaster, toast } from "@suyank/ui/toast";
+import { Button } from "@suyanksaraswat/ui/button";
+import { Form, useForm } from "@suyanksaraswat/ui/form";
+import { TextField } from "@suyanksaraswat/ui/textfield";
+import { Toaster, toast } from "@suyanksaraswat/ui/toast";
 import { z } from "zod";
 
 type FormProps = React.ComponentPropsWithoutRef<typeof Form>;

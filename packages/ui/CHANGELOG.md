@@ -1,4 +1,4 @@
-# @suyank/ui
+# @suyanksaraswat/ui
 
 ## 2.6.0
 

@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
-import { tv } from "@suyank/styles";
+import { tv } from "@suyanksaraswat/styles";
 
 export const AvatarStyles = {
   Root: tv({

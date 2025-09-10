@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Text, type TextProps } from "@suyank/ui/text";
+import { Text, type TextProps } from "@suyanksaraswat/ui/text";
 
 type TextVariant = Required<TextProps["variant"]>;
 type TextElement = Required<TextProps["as"]>;

@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 
 import { Slot } from "@radix-ui/react-slot";
-import { tv, type VariantProps } from "@suyank/styles";
+import { tv, type VariantProps } from "@suyanksaraswat/styles";
 
 export const ButtonStyles = tv({
   base: [

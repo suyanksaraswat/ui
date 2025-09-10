@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { tv } from "@suyank/styles";
+import { tv } from "@suyanksaraswat/styles";
 import { ChevronDown } from "lucide-react";
 
 export const AccordionStyles = {

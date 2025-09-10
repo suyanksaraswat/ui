@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Table, type TableProps } from "@suyank/ui/table";
+import { Table, type TableProps } from "@suyanksaraswat/ui/table";
 
 const meta: Meta<TableProps> = {
   title: "Components/Table",

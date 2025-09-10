@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
-import { tv } from "@suyank/styles";
+import { tv } from "@suyanksaraswat/styles";
 import { Check, ChevronRight, Circle } from "lucide-react";
 
 export const DropdownMenuStyles = {

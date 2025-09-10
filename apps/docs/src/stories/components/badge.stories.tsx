@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Badge, type BadgeProps } from "@suyank/ui/badge";
+import { Badge, type BadgeProps } from "@suyanksaraswat/ui/badge";
 
 type BadgeVariant = Required<BadgeProps["variant"]>;
 
