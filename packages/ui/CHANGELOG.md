@@ -1,5 +1,16 @@
 # @suyanksaraswat/ui
 
+## 4.0.0
+
+### Major Changes
+
+- update version
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @suyanksaraswat/styles@2.0.0
+
 ## 3.0.0
 
 ### Minor Changes
