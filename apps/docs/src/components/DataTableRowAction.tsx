@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@coderabbit/ui/button";
-import type { Row } from "@coderabbit/ui/data-table";
-import { DropdownMenu } from "@coderabbit/ui/dropdown-menu";
+import { Button } from "@suyank/ui/button";
+import type { Row } from "@suyank/ui/data-table";
+import { DropdownMenu } from "@suyank/ui/dropdown-menu";
 import { MoreHorizontalIcon } from "lucide-react";
 
 import { labels } from "~/data/data";

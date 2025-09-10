@@ -1,4 +1,4 @@
-# @coderabbit/styles
+# @suyank/styles
 
 ## 1.2.0
 

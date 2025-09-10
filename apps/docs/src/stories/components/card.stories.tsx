@@ -1,9 +1,9 @@
-import { Button } from "@coderabbit/ui/button";
-import { Card, type CardProps } from "@coderabbit/ui/card";
-import { Label } from "@coderabbit/ui/label";
-import { Select } from "@coderabbit/ui/select";
-import { TextField } from "@coderabbit/ui/textfield";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "@suyank/ui/button";
+import { Card, type CardProps } from "@suyank/ui/card";
+import { Label } from "@suyank/ui/label";
+import { Select } from "@suyank/ui/select";
+import { TextField } from "@suyank/ui/textfield";
 
 const meta: Meta<CardProps> = {
   title: "Components/Card",

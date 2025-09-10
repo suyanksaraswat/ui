@@ -1,6 +1,6 @@
-import { Label } from "@coderabbit/ui/label";
-import { Switch, type SwitchProps } from "@coderabbit/ui/switch";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Label } from "@suyank/ui/label";
+import { Switch, type SwitchProps } from "@suyank/ui/switch";
 
 const meta: Meta<SwitchProps> = {
   title: "Components/Switch",

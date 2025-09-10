@@ -2,8 +2,8 @@
 
 import { forwardRef } from "react";
 
-import { tv } from "@coderabbit/styles";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { tv } from "@suyank/styles";
 import { X } from "lucide-react";
 
 export const DialogStyles = {

@@ -1,4 +1,4 @@
-@import "@coderabbit/styles/theme.css" layer(theme);
+@import "@suyank/styles/theme.css" layer(theme);
 
 @tailwind base;
 @tailwind components;

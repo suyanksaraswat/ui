@@ -11,9 +11,9 @@ import {
   useFormContext,
 } from "react-hook-form";
 
-import { cn } from "@coderabbit/styles";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Slot } from "@radix-ui/react-slot";
+import { cn } from "@suyank/styles";
 import { type Schema as ZodSchema } from "zod";
 
 import { Label, type LabelProps } from "./label";

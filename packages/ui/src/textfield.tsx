@@ -2,7 +2,7 @@
 
 import { createContext, forwardRef, useContext } from "react";
 
-import { tv } from "@coderabbit/styles";
+import { tv } from "@suyank/styles";
 
 export const TextFieldStyles = {
   Root: tv({

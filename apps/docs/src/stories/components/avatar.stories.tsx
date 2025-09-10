@@ -1,5 +1,5 @@
-import { Avatar, type AvatarProps } from "@coderabbit/ui/avatar";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Avatar, type AvatarProps } from "@suyank/ui/avatar";
 
 const meta: Meta<AvatarProps> = {
   title: "Components/Avatar",
@@ -7,7 +7,7 @@ const meta: Meta<AvatarProps> = {
   render(props) {
     return (
       <Avatar {...props}>
-        <Avatar.Image src="https://github.com/coderabbit.png" />
+        <Avatar.Image src="https://github.com/suyank.png" />
         <Avatar.Fallback>FU</Avatar.Fallback>
       </Avatar>
     );
@@ -40,7 +40,7 @@ export const Group: Story = {
         fallback: "NG",
       },
       {
-        username: "coderabbit",
+        username: "suyank",
         fallback: "FU",
       },
     ];

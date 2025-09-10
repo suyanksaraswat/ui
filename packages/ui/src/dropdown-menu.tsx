@@ -2,8 +2,8 @@
 
 import { forwardRef } from "react";
 
-import { tv } from "@coderabbit/styles";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
+import { tv } from "@suyank/styles";
 import { Check, ChevronRight, Circle } from "lucide-react";
 
 export const DropdownMenuStyles = {

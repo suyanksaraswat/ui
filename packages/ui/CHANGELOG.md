@@ -1,4 +1,4 @@
-# @coderabbit/ui
+# @suyank/ui
 
 ## 2.6.0
 
@@ -68,7 +68,7 @@
 
 ### Minor Changes
 
-- [`697eae8`](https://github.com/coderabbit/ui/commit/697eae88fc0b1a91b1ab865330d2e6f82c2b0f5b) Thanks [@coderabbit](https://github.com/coderabbit)! - add label
+- [`697eae8`](https://github.com/suyank/ui/commit/697eae88fc0b1a91b1ab865330d2e6f82c2b0f5b) Thanks [@suyank](https://github.com/suyank)! - add label
 
 ## 1.1.0
 

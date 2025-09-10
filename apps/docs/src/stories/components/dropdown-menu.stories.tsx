@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { Button } from "@coderabbit/ui/button";
-import { DropdownMenu } from "@coderabbit/ui/dropdown-menu";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "@suyank/ui/button";
+import { DropdownMenu } from "@suyank/ui/dropdown-menu";
 import {
   User,
   CreditCard,

@@ -1,5 +1,5 @@
-import { Separator, type SeparatorProps } from "@coderabbit/ui/separator";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Separator, type SeparatorProps } from "@suyank/ui/separator";
 
 const meta: Meta<SeparatorProps> = {
   title: "Components/Separator",

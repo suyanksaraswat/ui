@@ -1,5 +1,5 @@
-import { Heading, type HeadingProps } from "@coderabbit/ui/heading";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Heading, type HeadingProps } from "@suyank/ui/heading";
 
 type HeadingVariant = Required<HeadingProps["variant"]>;
 type HeadingElement = Required<HeadingProps["as"]>;

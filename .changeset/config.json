@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "coderabbit/ui"
+      "repo": "suyank/ui"
     }
   ],
   "commit": false,
@@ -11,5 +11,5 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@coderabbit/docs"]
+  "ignore": ["@suyank/docs"]
 }

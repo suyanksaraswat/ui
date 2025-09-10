@@ -1,5 +1,5 @@
 {
-  "name": "@coderabbit/docs",
+  "name": "@suyank/docs",
   "private": true,
   "scripts": {
     "dev": "storybook dev -p 6006 --no-open",
@@ -10,15 +10,15 @@
     "lint": "eslint src --fix --max-warnings 0"
   },
   "dependencies": {
-    "@coderabbit/ui": "workspace:*",
+    "@suyank/ui": "workspace:*",
     "lucide-react": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@coderabbit/styles": "workspace:*",
-    "@coderabbit/tsconfig": "workspace:*",
+    "@suyank/styles": "workspace:*",
+    "@suyank/tsconfig": "workspace:*",
     "@storybook/addon-a11y": "^7.5.1",
     "@storybook/addon-actions": "^7.5.1",
     "@storybook/addon-docs": "^7.5.1",

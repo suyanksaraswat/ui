@@ -1,5 +1,5 @@
-import { Accordion } from "@coderabbit/ui/accordion";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Accordion } from "@suyank/ui/accordion";
 
 type AlertDialogProps = React.ComponentPropsWithoutRef<typeof Accordion>;
 

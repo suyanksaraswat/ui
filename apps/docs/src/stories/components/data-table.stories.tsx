@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from "react";
 
-import { Badge } from "@coderabbit/ui/badge";
-import { Checkbox } from "@coderabbit/ui/checkbox";
+import type { Meta, StoryObj } from "@storybook/react";
+import { Badge } from "@suyank/ui/badge";
+import { Checkbox } from "@suyank/ui/checkbox";
 import {
   DataTable,
   flexRender,
@@ -17,8 +18,7 @@ import {
   getFacetedRowModel,
   getFacetedUniqueValues,
   type ColumnDef,
-} from "@coderabbit/ui/data-table";
-import type { Meta, StoryObj } from "@storybook/react";
+} from "@suyank/ui/data-table";
 
 import { DataTableRowActions } from "~/components/DataTableRowAction";
 import { labels, priorities, statuses } from "~/data/data";

@@ -2,8 +2,8 @@
 
 import { forwardRef } from "react";
 
-import { tv } from "@coderabbit/styles";
 import { Root, Thumb } from "@radix-ui/react-switch";
+import { tv } from "@suyank/styles";
 
 export const SwitchStyles = {
   Root: tv({

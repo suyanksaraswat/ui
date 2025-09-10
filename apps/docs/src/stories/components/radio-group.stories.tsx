@@ -1,6 +1,6 @@
-import { Label } from "@coderabbit/ui/label";
-import { RadioGroup, type RadioGroupProps } from "@coderabbit/ui/radio-group";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Label } from "@suyank/ui/label";
+import { RadioGroup, type RadioGroupProps } from "@suyank/ui/radio-group";
 
 const meta: Meta<RadioGroupProps> = {
   title: "Components/Radio Group",

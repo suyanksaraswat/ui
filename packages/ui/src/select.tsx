@@ -2,8 +2,8 @@
 
 import { forwardRef } from "react";
 
-import { tv } from "@coderabbit/styles";
 import * as SelectPrimitive from "@radix-ui/react-select";
+import { tv } from "@suyank/styles";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 import { Text } from "./text";

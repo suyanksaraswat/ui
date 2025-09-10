@@ -1,5 +1,5 @@
-import { Slider, type SliderProps } from "@coderabbit/ui/slider";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Slider, type SliderProps } from "@suyank/ui/slider";
 
 const meta: Meta<SliderProps> = {
   title: "Components/Slider",

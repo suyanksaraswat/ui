@@ -1,4 +1,4 @@
-import { defineTailwindConfig } from "@coderabbit/styles";
+import { defineTailwindConfig } from "@suyank/styles";
 
 // Just for VSCode intellisense
 export default defineTailwindConfig({});

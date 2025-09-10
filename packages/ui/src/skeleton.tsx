@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-import { cn } from "@coderabbit/styles";
+import { cn } from "@suyank/styles";
 
 export type SkeletonProps = React.ComponentPropsWithoutRef<"div">;
 

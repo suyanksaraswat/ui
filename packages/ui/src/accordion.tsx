@@ -2,8 +2,8 @@
 
 import { forwardRef } from "react";
 
-import { tv } from "@coderabbit/styles";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { tv } from "@suyank/styles";
 import { ChevronDown } from "lucide-react";
 
 export const AccordionStyles = {

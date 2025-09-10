@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-import { tv } from "@coderabbit/styles";
+import { tv } from "@suyank/styles";
 
 export const SeparatorStyles = tv({
   base: ["shrink-0 bg-border"],

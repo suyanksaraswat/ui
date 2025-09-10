@@ -1,17 +1,17 @@
-# coderabbit/ui
+# suyank/ui
 
 ## Installation
 
 ```bash
-pnpm i @coderabbit/ui @coderabbit/styles lucide-react
+pnpm i @suyank/ui @suyank/styles lucide-react
 ```
 
-
 ## Initial configuration
+
 Extend the Design System theme on `tailwind.config.js`.
 
 ```js
-import { defineTailwindConfig } from "@coderabbit/styles";
+import { defineTailwindConfig } from "@suyank/styles";
 
 export default defineTailwindConfig({
   content: ["./src/{app,screens,components}/**/*.{ts,tsx}"],
@@ -21,7 +21,7 @@ export default defineTailwindConfig({
 Or in CJS
 
 ```cjs
-const { defineTailwindConfig } = require("@coderabbit/styles");
+const { defineTailwindConfig } = require("@suyank/styles");
 
 module.exports = defineTailwindConfig({
   content: ["./src/{app,screens,components}/**/*.{ts,tsx}"],
@@ -32,7 +32,7 @@ Import `theme.css` file at your `globals.css`.
 
 ```css
 /* default theme */
-@import "@coderabbit/styles/theme.css";
+@import "@suyank/styles/theme.css";
 
 @tailwind base;
 @tailwind components;
@@ -42,16 +42,14 @@ Import `theme.css` file at your `globals.css`.
 Great! Everything is ready to use it.
 
 ```jsx
-import { Button } from "@coderabbit/ui/button";
+import { Button } from "@suyank/ui/button";
 
 export function App() {
   return <Button>Hello World!</Button>;
 }
 ```
 
-
 ## Customization
-
 
 Customizing is as simple as changing CSS variables values.
 

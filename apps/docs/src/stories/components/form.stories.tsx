@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import { Button } from "@coderabbit/ui/button";
-import { Form, useForm } from "@coderabbit/ui/form";
-import { TextField } from "@coderabbit/ui/textfield";
-import { Toaster, toast } from "@coderabbit/ui/toast";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "@suyank/ui/button";
+import { Form, useForm } from "@suyank/ui/form";
+import { TextField } from "@suyank/ui/textfield";
+import { Toaster, toast } from "@suyank/ui/toast";
 import { z } from "zod";
 
 type FormProps = React.ComponentPropsWithoutRef<typeof Form>;
@@ -52,7 +52,7 @@ const meta: Meta<FormProps> = {
               <Form.Item>
                 <Form.Label>Username</Form.Label>
                 <Form.Control>
-                  <TextField placeholder="coderabbit" {...field} />
+                  <TextField placeholder="suyank" {...field} />
                 </Form.Control>
                 <Form.Message />
               </Form.Item>

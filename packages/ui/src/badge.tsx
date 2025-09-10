@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-import { tv, type VariantProps } from "@coderabbit/styles";
+import { tv, type VariantProps } from "@suyank/styles";
 
 export const BadgeStyles = tv({
   base: [

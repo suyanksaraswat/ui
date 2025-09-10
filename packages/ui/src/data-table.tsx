@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@coderabbit/styles";
+import { cn } from "@suyank/styles";
 import { type Column, type Table as ITable } from "@tanstack/react-table";
 import {
   ArrowDownIcon,

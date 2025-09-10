@@ -1,5 +1,5 @@
 {
-  "name": "@coderabbit/styles",
+  "name": "@suyank/styles",
   "version": "1.2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -8,11 +8,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coderabbit/ui",
+    "url": "https://github.com/suyank/ui",
     "directory": "packages/styles"
   },
   "bugs": {
-    "url": "https://github.com/coderabbit/ui/issues"
+    "url": "https://github.com/suyank/ui/issues"
   },
   "files": [
     "dist/**"
@@ -41,7 +41,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@coderabbit/tsconfig": "workspace:*",
+    "@suyank/tsconfig": "workspace:*",
     "@types/node": "^20.8.6",
     "tailwindcss": "^3.3.3",
     "tsup": "^7.2.0"
@@ -50,6 +50,6 @@
     "tailwindcss": ">=3.0.0 || insiders"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   }
 }

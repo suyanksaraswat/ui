@@ -1,7 +1,7 @@
 {
   "extends": [
-    "@coderabbit/eslint-config/react",
-    "@coderabbit/eslint-config/tailwind",
+    "@suyank/eslint-config/react",
+    "@suyank/eslint-config/tailwind",
     "plugin:storybook/recommended"
   ],
   "overrides": [

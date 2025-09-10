@@ -2,8 +2,8 @@
 
 import { forwardRef } from "react";
 
-import { tv } from "@coderabbit/styles";
 import { Root, Item, Indicator } from "@radix-ui/react-radio-group";
+import { tv } from "@suyank/styles";
 import { Circle } from "lucide-react";
 
 export const RadioGroupStyles = {

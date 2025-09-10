@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 
-import { tv, type VariantProps } from "@coderabbit/styles";
 import { Slot } from "@radix-ui/react-slot";
+import { tv, type VariantProps } from "@suyank/styles";
 
 export const HeadingStyles = tv({
   variants: {

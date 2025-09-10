@@ -1,6 +1,6 @@
-import { Button } from "@coderabbit/ui/button";
-import { Toaster, toast, type ToasterProps } from "@coderabbit/ui/toast";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "@suyank/ui/button";
+import { Toaster, toast, type ToasterProps } from "@suyank/ui/toast";
 
 type ToasterStoryProps = ToasterProps & {
   message: string;

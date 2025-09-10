@@ -1,6 +1,6 @@
-import { Label } from "@coderabbit/ui/label";
-import { Select, type SelectProps } from "@coderabbit/ui/select";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Label } from "@suyank/ui/label";
+import { Select, type SelectProps } from "@suyank/ui/select";
 
 const meta: Meta<SelectProps> = {
   title: "Components/Select",

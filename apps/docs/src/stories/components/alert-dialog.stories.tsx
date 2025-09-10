@@ -1,6 +1,6 @@
-import { AlertDialog } from "@coderabbit/ui/alert-dialog";
-import { Button } from "@coderabbit/ui/button";
 import type { Meta, StoryObj } from "@storybook/react";
+import { AlertDialog } from "@suyank/ui/alert-dialog";
+import { Button } from "@suyank/ui/button";
 
 type AlertDialogProps = React.ComponentPropsWithoutRef<typeof AlertDialog>;
 

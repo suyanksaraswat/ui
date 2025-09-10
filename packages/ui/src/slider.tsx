@@ -2,8 +2,8 @@
 
 import { forwardRef } from "react";
 
-import { tv } from "@coderabbit/styles";
 import * as SliderPrimitive from "@radix-ui/react-slider";
+import { tv } from "@suyank/styles";
 
 export const SliderStyles = {
   Root: tv({
