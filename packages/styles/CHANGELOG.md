@@ -1,5 +1,35 @@
 # @suyanksaraswat/styles
 
+## 7.0.0
+
+### Major Changes
+
+- undo changes
+
+## 6.0.0
+
+### Major Changes
+
+- test
+
+## 5.0.0
+
+### Major Changes
+
+- test
+
+## 4.0.0
+
+### Major Changes
+
+- test
+
+## 3.0.0
+
+### Major Changes
+
+- test
+
 ## 2.0.0
 
 ### Major Changes

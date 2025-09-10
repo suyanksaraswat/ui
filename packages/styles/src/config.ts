@@ -48,6 +48,18 @@ export const defaultTailwindConfig = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "crb-primary": "hsl(var(--crb-primary))",
+        "crb-foreground": "hsl(var(--crb-foreground))",
+        "crb-background": "hsl(var(--crb-background))",
+        "brand-secondary": "hsl(var(--brand-secondary))",
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
       },
       borderRadius: {
         lg: `var(--radius)`,

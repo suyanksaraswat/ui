@@ -1,67 +1,74 @@
 :root {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
-
-  --muted: 60 10% 93%;
-  --muted-foreground: 0 0% 29%;
-
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 4%;
-
-  --border: 60 17% 81%;
-  --input: 0 0% 100%;
-
+  --crb-primary: 18.86 100 51.96%;
+  --crb-foreground: 0 0% 100%;
+  --crb-background: 13.33 100% 98.24%;
+  --background-alt: 0 0% 96%;
   --card: 0 0% 100%;
   --card-foreground: 0 0% 4%;
-
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 4%;
+  --brand-secondary: 18 100% 98%;
   --primary: 16 100% 50%;
   --primary-foreground: 0 0% 98%;
-
   --secondary: 240 5% 96%;
   --secondary-foreground: 240 6% 10%;
-
+  --muted: 60 10% 93%;
+  --muted-foreground: 0 0% 29%;
   --accent: 60 10% 93%;
   --accent-foreground: 0 0% 9%;
-
+  --success: 153 91% 30%;
+  --success-foreground: 0 0% 98%;
+  --warning: 45 100% 50%;
+  --warning-foreground: 0 0% 98%;
   --destructive: 0 85% 56%;
   --destructive-foreground: 0 0% 98%;
-
+  --border: 60, 17%, 81%;
+  --border-brand: 19, 100%, 73%, 0.3;
+  --input: 0 0% 100%;
   --ring: 60 10% 84%;
-
   --radius: 0.5rem;
+  --login-providers-background: 60 22% 95%;
+  --login-message-background: 60 25% 93%;
+  /* Info banner tokens */
+  --info-border: #0088ff;
+  --info-bg: #e5f3ff;
+  --info-text: #001b33;
 }
 
 .dark {
   --background: 220 7% 9%;
   --foreground: 0 0% 90%;
-
-  --muted: 240 4% 16%;
-  --muted-foreground: 240 5% 60%;
-
-  --accent: 240 4% 16%;
-  --accent-foreground: 0 0% 98%;
-
-  --popover: 240 10% 4%;
-  --popover-foreground: 0 0% 98%;
-
-  --border: 0 0% 20%;
-  --input: 240 4% 16%;
-
+  --background-alt: 240 4% 16%;
+  --crb-primary: 18.86 100 51.96%;
+  --crb-foreground: 0 0% 90%;
+  --crb-background: 220 7% 9%;
   --card: 240 4% 11%;
   --card-foreground: 0 0% 98%;
-
-  --primary: 16 100% 50%;
+  --popover: 240 10% 4%;
+  --popover-foreground: 0 0% 98%;
+  --brand-secondary: 240 4% 16%;
+  --primary: 10.633 3.033% 272%;
   --primary-foreground: 240 6% 10%;
-
   --secondary: 240 4% 16%;
   --secondary-foreground: 0 0% 98%;
-
+  --muted: 240 4% 16%;
+  --muted-foreground: 240 5% 60%;
+  --accent: 240 4% 16%;
+  --accent-foreground: 0 0% 98%;
   --destructive: 0 63% 61%;
   --destructive-foreground: 0 0% 98%;
-
+  --border: 0 0% 20%;
+  --border-brand: 19, 100%, 73%, 0.3;
+  --input: 240 4% 16%;
   --ring: 60 10% 80%;
-
-  --radius: 0.5rem;
+  --login-message-background: 222 7% 8%;
+  --login-providers-background: 220 7% 12%;
+  /* Info banner tokens - dark */
+  --info-border: #0088ff;
+  --info-bg: #001b33;
+  --info-text: #e5f3ff;
 }
 
 html {
