@@ -25,7 +25,7 @@ export const Checkbox = forwardRef<
 >(({ className, ...props }, ref) => (
   <Root ref={ref} className={CheckboxStyles.Root({ className })} {...props}>
     <Indicator className="flex items-center justify-center text-current">
-      <Check className="h-4 w-4" />
+      <Check className="size-4" />
     </Indicator>
   </Root>
 ));

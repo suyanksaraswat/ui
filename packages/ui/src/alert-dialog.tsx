@@ -48,20 +48,20 @@ export const AlertDialogContent = forwardRef<
 ));
 AlertDialogContent.displayName = "AlertDialog.Content";
 
-export const AlertDialogHeader = ({
+export function AlertDialogHeader({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={AlertDialogStyles.Header({ className })} {...props} />
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={AlertDialogStyles.Header({ className })} {...props} />;
+}
 AlertDialogHeader.displayName = "AlertDialog.Header";
 
-export const AlertDialogFooter = ({
+export function AlertDialogFooter({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={AlertDialogStyles.Footer({ className })} {...props} />
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={AlertDialogStyles.Footer({ className })} {...props} />;
+}
 AlertDialogFooter.displayName = "AlertDialog.Footer";
 
 export const AlertDialogTitle = forwardRef<

@@ -19,7 +19,7 @@ export const SliderStyles = {
   }),
   Thumb: tv({
     base: [
-      "block h-5 w-5 rounded-full border-2 border-primary bg-background outline-none ring-offset-2 ring-offset-background transition-all",
+      "block size-5 rounded-full border-2 border-primary bg-background outline-none ring-offset-2 ring-offset-background transition-all",
       "data-[grabbing=false]:focus-visible:ring-2 data-[grabbing=false]:focus-visible:ring-primary",
       "disabled:pointer-events-none disabled:opacity-50",
       "hover:cursor-grab",

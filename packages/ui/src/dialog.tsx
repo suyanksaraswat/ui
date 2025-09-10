@@ -87,27 +87,27 @@ export const DialogContent = forwardRef<
         aria-label="Close"
         className={DialogStyles.Close()}
       >
-        <X className="h-4 w-4" />
+        <X className="size-4" />
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
 ));
 DialogContent.displayName = "Dialog.Content";
 
-export const DialogHeader = ({
+export function DialogHeader({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={DialogStyles.Header({ className })} {...props} />
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={DialogStyles.Header({ className })} {...props} />;
+}
 DialogHeader.displayName = "Dialog.Header";
 
-export const DialogFooter = ({
+export function DialogFooter({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={DialogStyles.Footer({ className })} {...props} />
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={DialogStyles.Footer({ className })} {...props} />;
+}
 DialogFooter.displayName = "Dialog.Footer";
 
 export const DialogTitle = forwardRef<

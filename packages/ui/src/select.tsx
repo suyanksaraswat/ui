@@ -20,7 +20,7 @@ export const SelectStyles = {
   Content: tv({
     base: [
       [
-        "relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover text-popover-foreground shadow-md",
+        "relative z-50 min-w-32 overflow-hidden rounded-md border border-border bg-popover text-popover-foreground shadow-md",
         "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
         "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
         "data-[side=bottom]:slide-in-from-top-2",
@@ -104,7 +104,7 @@ export const SelectTrigger = forwardRef<
       placeholder={<Text className="text-muted-foreground">{placeholder}</Text>}
     />
     <SelectPrimitive.Icon asChild>
-      <ChevronDown className="h-4 w-4 opacity-50 transition-transform duration-200 group-aria-expanded:rotate-180" />
+      <ChevronDown className="size-4 opacity-50 transition-transform duration-200 group-aria-expanded:rotate-180" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
@@ -127,7 +127,7 @@ export const SelectContent = forwardRef<
       {...props}
     >
       <SelectPrimitive.ScrollUpButton className={SelectStyles.ScrollButton()}>
-        <ChevronUp className="h-4 w-4" />
+        <ChevronUp className="size-4" />
       </SelectPrimitive.ScrollUpButton>
       <SelectPrimitive.Viewport
         className={SelectStyles.Viewport({ popper: position === "popper" })}
@@ -135,7 +135,7 @@ export const SelectContent = forwardRef<
         {children}
       </SelectPrimitive.Viewport>
       <SelectPrimitive.ScrollDownButton className={SelectStyles.ScrollButton()}>
-        <ChevronDown className="h-4 w-4" />
+        <ChevronDown className="size-4" />
       </SelectPrimitive.ScrollDownButton>
     </SelectPrimitive.Content>
   </SelectPrimitive.Portal>
@@ -167,9 +167,9 @@ export const SelectItem = forwardRef<
     className={SelectStyles.Item({ className })}
     {...props}
   >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+    <span className="absolute left-2 flex size-3.5 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
+        <Check className="size-4" />
       </SelectPrimitive.ItemIndicator>
     </span>
 

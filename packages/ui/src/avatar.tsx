@@ -7,15 +7,13 @@ import { tv } from "@suyanksaraswat/styles";
 
 export const AvatarStyles = {
   Root: tv({
-    base: ["relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full"],
+    base: ["relative flex size-10 shrink-0 overflow-hidden rounded-full"],
   }),
   Image: tv({
-    base: ["aspect-square h-full w-full"],
+    base: ["aspect-square size-full"],
   }),
   Fallback: tv({
-    base: [
-      "flex h-full w-full items-center justify-center rounded-full bg-muted",
-    ],
+    base: ["flex size-full items-center justify-center rounded-full bg-muted"],
   }),
 };
 
