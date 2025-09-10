@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "suyank/ui"
+      "repo": "suyanksaraswat/ui"
     }
   ],
   "commit": false,
@@ -11,5 +11,5 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@suyanksaraswat/docs"]
+  "ignore": ["@suyanksaraswat/docs", "@suyanksaraswat/eslint-config"]
 }

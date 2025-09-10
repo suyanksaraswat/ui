@@ -17,7 +17,7 @@
     "@commitlint/cli": "^17.8.1",
     "@commitlint/config-conventional": "^17.8.1",
     "@commitlint/cz-commitlint": "^17.8.1",
-    "@suyanksaraswat/eslint-config": "^1.12.2",
+    "@suyanksaraswat/eslint-config": "workspace:*",
     "commitizen": "^4.3.0",
     "eslint": "^8.52.0",
     "husky": "^8.0.3",

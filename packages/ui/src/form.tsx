@@ -31,18 +31,16 @@ const FormFieldContext = createContext<FormFieldContextValue>(
   {} as FormFieldContextValue,
 );
 
-const FormField = <
+function FormField<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
->({
-  ...props
-}: ControllerProps<TFieldValues, TName>) => {
+>({ ...props }: ControllerProps<TFieldValues, TName>) {
   return (
     <FormFieldContext.Provider value={{ name: props.name }}>
       <Controller {...props} />
     </FormFieldContext.Provider>
   );
-};
+}
 
 const useFormField = () => {
   const fieldContext = useContext(FormFieldContext);
@@ -179,6 +177,7 @@ function useForm<
 >(
   props: UseFormProps<TFieldValues, TContext>,
 ): UseReactHookFormReturn<TFieldValues, TContext, TTransformedValues> {
+  // @ts-expect-error - TODO: fix this ts return type
   return useReactHookForm({
     ...props,
     defaultValues: props.defaultValues,
