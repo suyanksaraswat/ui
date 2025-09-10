@@ -1,5 +1,16 @@
 # @suyanksaraswat/ui
 
+## 3.0.0
+
+### Minor Changes
+
+- ts config updates
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @suyanksaraswat/styles@1.3.0
+
 ## 2.6.0
 
 ### Minor Changes
