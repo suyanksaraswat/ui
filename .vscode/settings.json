@@ -1,0 +1,21 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "cSpell.words": [
+    "clsx",
+    "coderabbit",
+    "commitlint",
+    "deepmerge",
+    "fastify",
+    "hookform",
+    "lucide",
+    "shadcn",
+    "sonner",
+    "tanstack",
+    "treeshake",
+    "tsup"
+  ]
+}

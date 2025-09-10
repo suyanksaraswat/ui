@@ -1,0 +1,68 @@
+import { Meta, Story } from "@storybook/blocks";
+import { ThemeColor } from "~/components/ThemeColor";
+
+<Meta title="Docs/Colors" />
+
+<Story name="Default" >
+<ThemeColor
+  variable="background"
+  className="bg-background text-foreground border border-border"
+/>
+<ThemeColor variable="foreground" className="bg-foreground text-background" />
+
+<ThemeColor variable="muted" className="bg-muted text-muted-foreground" />
+<ThemeColor
+  variable="muted-foreground"
+  className="bg-muted-foreground text-muted"
+/>
+
+<ThemeColor variable="popover" className="bg-popover text-popover-foreground" />
+<ThemeColor
+  variable="popover-foreground"
+  className="bg-popover-foreground text-popover"
+/>
+
+<ThemeColor variable="border" className="bg-border" />
+<ThemeColor variable="input" className="bg-input" />
+
+<ThemeColor variable="card" className="bg-card text-card-foreground" />
+<ThemeColor
+  variable="card-foreground"
+  className="bg-card-foreground text-card"
+/>
+
+<ThemeColor variable="primary" className="bg-primary text-primary-foreground" />
+<ThemeColor
+  variable="primary-foreground"
+  className="bg-primary-foreground text-primary"
+/>
+
+<ThemeColor
+  variable="secondary"
+  className="bg-secondary text-secondary-foreground"
+/>
+<ThemeColor
+  variable="secondary-foreground"
+  className="bg-secondary-foreground text-secondary"
+/>
+
+<ThemeColor variable="accent" className="bg-accent text-accent-foreground" />
+<ThemeColor
+  variable="accent-foreground"
+  className="bg-accent-foreground text-accent"
+/>
+
+<ThemeColor
+  variable="destructive"
+  className="bg-destructive text-destructive-foreground"
+/>
+<ThemeColor
+  variable="destructive-foreground"
+  className="bg-destructive-foreground text-destructive"
+/>
+
+<ThemeColor
+  variable="ring"
+  className="bg-ring"
+/>
+</Story>

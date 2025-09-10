@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "@coderabbit/eslint-config/react",
+    "@coderabbit/eslint-config/tailwind"
+  ],
+  "ignorePatterns": ["dist"]
+}

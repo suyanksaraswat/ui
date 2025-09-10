@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "@coderabbit/eslint-config/react",
+    "@coderabbit/eslint-config/tailwind",
+    "plugin:storybook/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["src/stories/components/*.stories.{tsx,mdx}"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}

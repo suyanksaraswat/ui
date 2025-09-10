@@ -1,0 +1,3 @@
+{
+  "extends": ["@coderabbit/eslint-config/node"]
+}

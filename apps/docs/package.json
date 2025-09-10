@@ -1,0 +1,43 @@
+{
+  "name": "@coderabbit/docs",
+  "private": true,
+  "scripts": {
+    "dev": "storybook dev -p 6006 --no-open",
+    "build": "storybook build -o dist",
+    "start": "serve dist",
+    "preview-storybook": "serve dist",
+    "clean": "rimraf .turbo dist node_modules",
+    "lint": "eslint src --fix --max-warnings 0"
+  },
+  "dependencies": {
+    "@coderabbit/ui": "workspace:*",
+    "lucide-react": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@coderabbit/styles": "workspace:*",
+    "@coderabbit/tsconfig": "workspace:*",
+    "@storybook/addon-a11y": "^7.5.1",
+    "@storybook/addon-actions": "^7.5.1",
+    "@storybook/addon-docs": "^7.5.1",
+    "@storybook/addon-essentials": "^7.5.1",
+    "@storybook/addon-interactions": "^7.5.1",
+    "@storybook/addon-links": "^7.5.1",
+    "@storybook/addon-themes": "^7.5.1",
+    "@storybook/blocks": "^7.5.1",
+    "@storybook/react": "^7.5.1",
+    "@storybook/react-vite": "^7.5.1",
+    "@types/react": "^18.2.32",
+    "@types/react-dom": "^18.2.14",
+    "@vitejs/plugin-react": "^4.1.0",
+    "autoprefixer": "^10.4.16",
+    "eslint-plugin-storybook": "^0.6.15",
+    "postcss": "^8.4.31",
+    "serve": "^14.2.1",
+    "storybook": "^7.5.1",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.5.0"
+  }
+}
