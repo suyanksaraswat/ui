@@ -1,11 +1,11 @@
 {
-  "name": "@suyank/ui",
+  "name": "@suyanksaraswat/ui",
   "version": "2.6.0",
   "description": "An accessible and customizable component library powered by shadcn/ui",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/suyank/ui",
+    "url": "https://github.com/suyanksaraswat/ui",
     "directory": "packages/ui"
   },
   "exports": {
@@ -176,8 +176,8 @@
     "sonner": "^1.4.0"
   },
   "devDependencies": {
-    "@suyank/styles": "workspace:*",
-    "@suyank/tsconfig": "workspace:*",
+    "@suyanksaraswat/styles": "workspace:*",
+    "@suyanksaraswat/tsconfig": "workspace:*",
     "@types/react": "^18.2.28",
     "lucide-react": "^0.288.0",
     "react": "^18.2.0",
@@ -186,7 +186,7 @@
     "zod": "^3.22.4"
   },
   "peerDependencies": {
-    "@suyank/styles": "*",
+    "@suyanksaraswat/styles": "*",
     "lucide-react": "*",
     "react": "^18",
     "zod": "^3"
