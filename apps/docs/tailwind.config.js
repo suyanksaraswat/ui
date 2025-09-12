@@ -1,4 +1,4 @@
-import { defineTailwindConfig } from "@suyanksaraswat/styles";
+import { defineTailwindConfig } from "@suyanksaraswat/ui";
 
 /** @type {import('tailwindcss').Config} */
 export default defineTailwindConfig({

@@ -102,9 +102,6 @@ importers:
       '@storybook/react-vite':
         specifier: ^7.5.1
         version: 7.6.20(react-dom@18.3.1)(react@18.3.1)(typescript@5.9.2)(vite@4.5.14)
-      '@suyanksaraswat/styles':
-        specifier: workspace:*
-        version: link:../../packages/styles
       '@suyanksaraswat/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -246,6 +243,9 @@ importers:
 
   packages/ui:
     dependencies:
+      '@fastify/deepmerge':
+        specifier: ^1.3.0
+        version: 1.3.0
       '@hookform/resolvers':
         specifier: ^3.3.2
         version: 3.10.0(react-hook-form@7.62.0)
@@ -291,19 +291,34 @@ importers:
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
+      clsx:
+        specifier: ^2.0.0
+        version: 2.1.1
       react-hook-form:
         specifier: ^7.47.0
         version: 7.62.0(react@18.3.1)
       sonner:
         specifier: ^1.4.0
         version: 1.7.4(react-dom@18.3.1)(react@18.3.1)
+      tailwind-merge:
+        specifier: ^1.14.0
+        version: 1.14.0
+      tailwind-variants:
+        specifier: ^0.1.14
+        version: 0.1.20(tailwindcss@3.4.17)
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.17)
     devDependencies:
+      '@rollup/plugin-commonjs':
+        specifier: ^28.0.6
+        version: 28.0.6(rollup@4.50.1)
+      '@rollup/plugin-node-resolve':
+        specifier: ^16.0.1
+        version: 16.0.1(rollup@4.50.1)
       '@rollup/plugin-typescript':
         specifier: ^12.1.4
         version: 12.1.4(rollup@4.50.1)(typescript@5.9.2)
-      '@suyanksaraswat/styles':
-        specifier: workspace:*
-        version: link:../styles
       '@suyanksaraswat/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -337,15 +352,21 @@ importers:
       rollup-plugin-dts:
         specifier: ^6.2.3
         version: 6.2.3(rollup@4.50.1)(typescript@5.9.2)
-      tailwind-variants:
-        specifier: ^0.1.14
-        version: 0.1.20(tailwindcss@3.4.17)
+      rollup-plugin-postcss:
+        specifier: ^4.0.2
+        version: 4.0.2(postcss@8.5.6)(ts-node@10.9.2)
       tailwindcss:
         specifier: ^3.4.0
         version: 3.4.17(ts-node@10.9.2)
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.19.13)(typescript@5.9.2)
       tsup:
         specifier: ^8.0.2
         version: 8.5.0(postcss@8.5.6)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
       zod:
         specifier: ^3.22.4
         version: 3.25.76
@@ -12738,6 +12759,7 @@ packages:
 
   /tailwind-merge@1.14.0:
     resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
+    dev: false
 
   /tailwind-variants@0.1.20(tailwindcss@3.4.17):
     resolution: {integrity: sha512-AMh7x313t/V+eTySKB0Dal08RHY7ggYK0MSn/ad8wKWOrDUIzyiWNayRUm2PIJ4VRkvRnfNuyRuKbLV3EN+ewQ==}
@@ -12747,6 +12769,7 @@ packages:
     dependencies:
       tailwind-merge: 1.14.0
       tailwindcss: 3.4.17(ts-node@10.9.2)
+    dev: false
 
   /tailwindcss-animate@1.0.7(tailwindcss@3.4.17):
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}

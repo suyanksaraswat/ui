@@ -1,19 +1,22 @@
+import commonjs from "@rollup/plugin-commonjs";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import path from "path";
 import { dts } from "rollup-plugin-dts";
+import postcss from "rollup-plugin-postcss";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const inputFile = path.resolve(__dirname, "src/index.tsx");
+const inputFile = path.resolve(__dirname, "src/index.ts");
 const distDir = path.resolve(__dirname, "dist");
 
 /** @type {import('rollup').RollupOptions[]} */
 export default [
-  // JS outputs (ESM and CJS)
+  // JS build (ESM and CJS)
   {
-    input: inputFile,
+    input: "src/index.ts",
     output: [
       {
         file: path.join(distDir, "index.mjs"),
@@ -28,15 +31,38 @@ export default [
       },
     ],
     plugins: [
+      nodeResolve(),
+      commonjs(),
       typescript({
         tsconfig: "./tsconfig.json",
-        declaration: false, // No declarations here, handled by dts()
+        declaration: false,
         emitDeclarationOnly: false,
         outDir: distDir,
       }),
     ],
-    external: ["react", "react-dom"],
+    external: [
+      "react",
+      "react-dom",
+      "lucide-react",
+      "zod",
+      "tailwindcss",
+    ],
   },
+
+  // CSS build
+  {
+    input: "src/theme.css",
+    output: {
+      file: path.join(distDir, "theme.css"),
+    },
+    plugins: [
+      postcss({
+        extract: true,
+        minimize: true,
+      }),
+    ],
+  },
+
   // Type declarations (index.d.mts)
   {
     input: inputFile,
@@ -53,8 +79,9 @@ export default [
         },
       }),
     ],
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", "lucide-react", "zod", "tailwindcss"],
   },
+
   // Type declarations (index.d.ts)
   {
     input: inputFile,
@@ -71,6 +98,6 @@ export default [
         },
       }),
     ],
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", "lucide-react", "zod", "tailwindcss"],
   },
 ];

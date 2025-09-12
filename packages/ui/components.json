@@ -4,8 +4,8 @@
   "rsc": true,
   "tsx": true,
   "tailwind": {
-    "config": "tailwind.config.ts",
-    "css": "@suyanksaraswat/styles/theme.css",
+    "config": "tailwind.config.js",
+    "css": "./src/theme.css",
     "baseColor": "zinc",
     "cssVariables": true,
     "prefix": ""
@@ -13,8 +13,8 @@
   "aliases": {
     "components": "src/components",
     "ui": "src/components",
-    "utils": "@suyanksaraswat/styles",
-    "lib": "@suyanksaraswat/styles",
+    "utils": "src/utils",
+    "lib": "src/lib",
     "hooks": "src/hooks"
   }
 }
