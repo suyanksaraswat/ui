@@ -1,4 +1,6 @@
 import { defineTailwindConfig } from "@suyanksaraswat/styles";
 
-// Just for VSCode intellisense
-export default defineTailwindConfig({});
+/** @type {import('tailwindcss').Config} */
+export default defineTailwindConfig({
+  content: ["./src/**/*.{ts,tsx}"],
+});
