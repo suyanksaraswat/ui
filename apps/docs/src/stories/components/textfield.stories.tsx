@@ -60,7 +60,7 @@ export const WithSlot: Story = {
     return (
       <TextField.Root>
         <TextField.Slot>
-          <Search className="h-4 w-4" />
+          <Search className="size-4" />
         </TextField.Slot>
         <TextField.Input {...props} />
       </TextField.Root>
@@ -78,7 +78,7 @@ export const WithLabel: Story = {
         <Label htmlFor="item">Search for a item</Label>
         <TextField.Root>
           <TextField.Slot>
-            <Search className="h-4 w-4" />
+            <Search className="size-4" />
           </TextField.Slot>
           <TextField.Input id="item" {...props} />
         </TextField.Root>

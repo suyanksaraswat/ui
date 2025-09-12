@@ -54,6 +54,7 @@ function flattenDts(distDir) {
   };
 }
 
+/** @type {import('rollup').RollupOptions[]} */
 const config = [
   {
     input: inputFiles,
@@ -63,6 +64,7 @@ const config = [
         format: "esm",
         entryFileNames: "[name].mjs",
         sourcemap: true,
+        preserveModules: true,
       },
       {
         dir: distDir,
@@ -70,6 +72,7 @@ const config = [
         entryFileNames: "[name].js",
         sourcemap: true,
         exports: "named",
+        preserveModules: true,
       },
     ],
     plugins: [
@@ -91,6 +94,7 @@ const config = [
       dir: distDir,
       format: "esm",
       entryFileNames: "[name].d.mts",
+      preserveModules: true,
     },
     plugins: [
       dts({
@@ -110,6 +114,7 @@ const config = [
       dir: distDir,
       format: "cjs",
       entryFileNames: "[name].d.ts",
+      preserveModules: true,
     },
     plugins: [
       dts({
@@ -123,15 +128,13 @@ const config = [
     external: ["react", "react-dom"],
   },
   {
-    input: inputFiles, // keep your existing inputFiles array
+    input: inputFiles,
     output: {
       dir: distDir,
       format: "es",
+      preserveModules: true,
     },
-    plugins: [
-      dts(),
-      flattenDts(distDir), // only cleans up dist/src
-    ],
+    plugins: [dts(), flattenDts(distDir)],
   },
 ];
 
