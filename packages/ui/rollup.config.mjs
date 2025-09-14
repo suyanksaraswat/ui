@@ -101,7 +101,9 @@ const sharedPlugins = [
   copy({
     targets: [
       { src: "src/theme.css", dest: "dist" },
+      { src: "src/theme-v4.css", dest: "dist" },
       { src: "tailwind.config.ts", dest: "dist" },
+      { src: "tailwind-v4.config.ts", dest: "dist" },
     ],
   }),
 ];
