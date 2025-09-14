@@ -5,6 +5,7 @@ import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 import { readdirSync, statSync } from "fs";
 import { join, extname } from "path";
+import copy from "rollup-plugin-copy";
 import { dts } from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 
@@ -96,6 +97,12 @@ const sharedPlugins = [
     format: {
       comments: false,
     },
+  }),
+  copy({
+    targets: [
+      { src: "src/theme.css", dest: "dist" },
+      { src: "tailwind.config.ts", dest: "dist" },
+    ],
   }),
 ];
 

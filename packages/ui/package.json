@@ -34,13 +34,11 @@
       "require": "./dist/cjs/*.cjs.js",
       "types": "./dist/*.d.ts"
     },
-    "./theme.css": "./theme.css",
-    "./tailwind.config.ts": "./tailwind.config.ts"
+    "./theme.css": "./dist/theme.css",
+    "./tailwind.config.ts": "./dist/tailwind.config.ts"
   },
   "files": [
-    "dist",
-    "theme.css",
-    "tailwind.config.ts"
+    "dist"
   ],
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
@@ -94,6 +92,7 @@
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "rollup": "^4.50.1",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
