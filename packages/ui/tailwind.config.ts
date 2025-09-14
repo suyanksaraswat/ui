@@ -1,8 +1,7 @@
-import { deepmerge } from "@fastify/deepmerge";
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 
-export const defaultTailwindConfig = {
+const config: Config = {
   content: [],
   darkMode: ["class"],
   theme: {
@@ -83,15 +82,6 @@ export const defaultTailwindConfig = {
     },
   },
   plugins: [animate],
-} satisfies Config;
+};
 
-/**
- * Define TailwindCSS Config
- * @param config - Tailwind config object
- * @return new config object
- */
-export function defineTailwindConfig(config: Config) {
-  return deepmerge({
-    all: true,
-  })(config, defaultTailwindConfig) as Config;
-}
+export default config;

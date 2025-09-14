@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button, type ButtonProps } from "@suyanksaraswat/ui";
+import { Button, type ButtonProps } from "@suyanksaraswat/ui/button";
 import { Plus } from "lucide-react";
 
 type ButtonVariant = Required<ButtonProps["variant"]>;

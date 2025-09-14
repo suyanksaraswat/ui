@@ -1,103 +1,180 @@
+import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import resolve from "@rollup/plugin-node-resolve";
+import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
-import path from "path";
+import { readdirSync, statSync } from "fs";
+import { join, extname } from "path";
 import { dts } from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
-import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Helper function to automatically discover all components and utilities
+function discoverModules(dir, extensions = ['.ts', '.tsx']) {
+  const modules = {};
+  
+  function scanDirectory(currentDir, basePath = '') {
+    const items = readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = join(currentDir, item);
+      const stat = statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Recursively scan subdirectories
+        scanDirectory(fullPath, join(basePath, item));
+      } else if (stat.isFile()) {
+        const ext = extname(item);
+        if (extensions.includes(ext)) {
+          const name = item.replace(ext, '');
+          // Skip index files as they're handled separately
+          if (name !== 'index') {
+            const modulePath = join(basePath, name).replace(/\\/g, '/');
+            modules[name] = `${modulePath}${ext}`;
+          }
+        }
+      }
+    }
+  }
+  
+  scanDirectory(dir);
+  return modules;
+}
 
-const inputFile = path.resolve(__dirname, "src/index.ts");
-const distDir = path.resolve(__dirname, "dist");
+// Auto-discover components and utilities
+const components = discoverModules('src/components');
+const utils = discoverModules('src/utils');
+
+// Add src/ prefix to all paths
+Object.keys(components).forEach(key => {
+  components[key] = `src/components/${components[key]}`;
+});
+Object.keys(utils).forEach(key => {
+  utils[key] = `src/utils/${utils[key]}`;
+});
+
+// Combine all individual modules
+const individualModules = { ...components, ...utils };
+
+// Shared plugins configuration
+const sharedPlugins = [
+  resolve({
+    extensions: [".mjs", ".js", ".ts", ".tsx", ".json"],
+  }),
+  commonjs(),
+  typescript({
+    tsconfig: "./tsconfig.build.json",
+    jsx: "preserve",
+    sourceMap: true,
+  }),
+  babel({
+    exclude: "node_modules/**",
+    babelHelpers: "bundled",
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    presets: [
+      [
+        "@babel/preset-react",
+        {
+          runtime: "automatic",
+        },
+      ],
+    ],
+  }),
+  postcss({
+    extract: "theme.css",
+    minimize: true,
+  }),
+  terser({
+    compress: {
+      drop_console: true,
+      drop_debugger: true,
+      pure_funcs: ["console.log", "console.info", "console.debug"],
+      passes: 2,
+    },
+    mangle: {
+      toplevel: true,
+    },
+    format: {
+      comments: false,
+    },
+  }),
+];
 
 /** @type {import('rollup').RollupOptions[]} */
-export default [
-  // JS build (ESM and CJS)
+const config = [
+  // 1️⃣ Main bundle
   {
     input: "src/index.ts",
     output: [
       {
-        file: path.join(distDir, "index.mjs"),
+        dir: "dist/esm",
         format: "esm",
         sourcemap: true,
+        entryFileNames: "[name].js",
+        manualChunks: {
+          "radix-vendor": ["@radix-ui/react-slot"],
+          "utils-vendor": [
+            "class-variance-authority",
+            "clsx",
+            "tailwind-merge",
+          ],
+        },
       },
       {
-        file: path.join(distDir, "index.js"),
+        dir: "dist/cjs",
         format: "cjs",
         sourcemap: true,
-        exports: "named",
+        entryFileNames: "[name].cjs.js",
+        manualChunks: {
+          "radix-vendor": ["@radix-ui/react-slot"],
+          "utils-vendor": [
+            "class-variance-authority",
+            "clsx",
+            "tailwind-merge",
+          ],
+        },
       },
     ],
-    plugins: [
-      nodeResolve(),
-      commonjs(),
-      typescript({
-        tsconfig: "./tsconfig.json",
-        declaration: false,
-        emitDeclarationOnly: false,
-        outDir: distDir,
-      }),
-    ],
-    external: [
-      "react",
-      "react-dom",
-      "lucide-react",
-      "zod",
-      "tailwindcss",
-    ],
+    plugins: sharedPlugins,
+    external: ["react", "react-dom"],
   },
 
-  // CSS build
+  // 2️⃣ Individual components and utilities (auto-discovered)
   {
-    input: "src/theme.css",
-    output: {
-      file: path.join(distDir, "theme.css"),
-    },
-    plugins: [
-      postcss({
-        extract: true,
-        minimize: true,
-      }),
+    input: individualModules,
+    output: [
+      {
+        dir: "dist/esm",
+        format: "esm",
+        sourcemap: true,
+        entryFileNames: "[name].js",
+      },
+      {
+        dir: "dist/cjs",
+        format: "cjs",
+        sourcemap: true,
+        entryFileNames: "[name].cjs.js",
+      },
     ],
+    plugins: sharedPlugins,
+    external: ["react", "react-dom"],
   },
 
-  // Type declarations (index.d.mts)
+  // 3️⃣ Type definitions
   {
-    input: inputFile,
-    output: {
-      file: path.join(distDir, "index.d.mts"),
-      format: "esm",
+    input: {
+      index: "src/index.ts",
+      ...individualModules,
     },
-    plugins: [
-      dts({
-        compilerOptions: {
-          declaration: true,
-          emitDeclarationOnly: true,
-          outDir: distDir,
-        },
-      }),
+    output: [
+      {
+        dir: "dist",
+        format: "esm",
+        entryFileNames: "[name].d.ts",
+      },
     ],
-    external: ["react", "react-dom", "lucide-react", "zod", "tailwindcss"],
-  },
-
-  // Type declarations (index.d.ts)
-  {
-    input: inputFile,
-    output: {
-      file: path.join(distDir, "index.d.ts"),
-      format: "cjs",
-    },
-    plugins: [
-      dts({
-        compilerOptions: {
-          declaration: true,
-          emitDeclarationOnly: true,
-          outDir: distDir,
-        },
-      }),
-    ],
-    external: ["react", "react-dom", "lucide-react", "zod", "tailwindcss"],
+    plugins: [dts()],
+    external: [/\.css$/],
   },
 ];
+
+export default config;
