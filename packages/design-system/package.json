@@ -1,6 +1,6 @@
 {
   "name": "@suyanksaraswat/design-system",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An accessible and customizable component library powered by shadcn/ui",
   "license": "MIT",
   "repository": {
@@ -28,6 +28,16 @@
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.cjs.js",
       "types": "./dist/index.d.ts"
+    },
+    "./icons": {
+      "import": "./dist/esm/icons.js",
+      "require": "./dist/cjs/icons.cjs.js",
+      "types": "./dist/icons.d.ts"
+    },
+    "./icons/*": {
+      "import": "./dist/esm/*.js",
+      "require": "./dist/cjs/*.cjs.js",
+      "types": "./dist/*.d.ts"
     },
     "./*": {
       "import": "./dist/esm/*.js",

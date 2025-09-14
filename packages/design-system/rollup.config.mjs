@@ -41,9 +41,10 @@ function discoverModules(dir, extensions = ['.ts', '.tsx']) {
   return modules;
 }
 
-// Auto-discover components and utilities
+// Auto-discover components, utilities, and icons
 const components = discoverModules('src/components');
 const utils = discoverModules('src/utils');
+const icons = discoverModules('src/icons');
 
 // Add src/ prefix to all paths
 Object.keys(components).forEach(key => {
@@ -52,9 +53,18 @@ Object.keys(components).forEach(key => {
 Object.keys(utils).forEach(key => {
   utils[key] = `src/utils/${utils[key]}`;
 });
+Object.keys(icons).forEach(key => {
+  icons[key] = `src/icons/${icons[key]}`;
+});
 
 // Combine all individual modules
-const individualModules = { ...components, ...utils };
+const individualModules = { 
+  ...components, 
+  ...utils, 
+  ...icons,
+  // Add icons index for @suyanksaraswat/design-system/icons import
+  icons: 'src/icons/index.ts'
+};
 
 // Shared plugins configuration
 const sharedPlugins = [
