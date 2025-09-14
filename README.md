@@ -1,9 +1,9 @@
-# suyank/ui
+# suyank/design-system
 
 ## Installation
 
 ```bash
-pnpm i @suyanksaraswat/ui @suyanksaraswat/styles lucide-react
+pnpm i @suyanksaraswat/design-system lucide-react
 ```
 
 ## Initial configuration
@@ -11,28 +11,30 @@ pnpm i @suyanksaraswat/ui @suyanksaraswat/styles lucide-react
 Extend the Design System theme on `tailwind.config.js`.
 
 ```js
-import { defineTailwindConfig } from "@suyanksaraswat/styles";
+import sharedConfig from "@suyanksaraswat/design-system/tailwind.config.ts";
 
-export default defineTailwindConfig({
+export default {
+  ...sharedConfig,
   content: ["./src/{app,screens,components}/**/*.{ts,tsx}"],
-});
+};
 ```
 
 Or in CJS
 
 ```cjs
-const { defineTailwindConfig } = require("@suyanksaraswat/styles");
+const sharedConfig = require("@suyanksaraswat/design-system/tailwind.config.ts");
 
-module.exports = defineTailwindConfig({
+module.exports = {
+  ...sharedConfig,
   content: ["./src/{app,screens,components}/**/*.{ts,tsx}"],
-});
+};
 ```
 
 Import `theme.css` file at your `globals.css`.
 
 ```css
 /* default theme */
-@import "@suyanksaraswat/styles/theme.css";
+@import "@suyanksaraswat/design-system/theme.css";
 
 @tailwind base;
 @tailwind components;
@@ -42,7 +44,7 @@ Import `theme.css` file at your `globals.css`.
 Great! Everything is ready to use it.
 
 ```jsx
-import { Button } from "@suyanksaraswat/ui/button";
+import { Button } from "@suyanksaraswat/design-system/button";
 
 export function App() {
   return <Button>Hello World!</Button>;

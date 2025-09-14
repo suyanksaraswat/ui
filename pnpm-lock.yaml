@@ -56,9 +56,9 @@ importers:
 
   apps/docs:
     dependencies:
-      '@suyanksaraswat/ui':
+      '@suyanksaraswat/design-system':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../packages/design-system
       lucide-react:
         specifier: latest
         version: 0.543.0(react@18.3.1)
@@ -136,57 +136,7 @@ importers:
         specifier: ^4.5.0
         version: 4.5.14(@types/node@20.19.13)
 
-  packages/eslint-config:
-    dependencies:
-      '@next/eslint-plugin-next':
-        specifier: latest
-        version: 15.5.2
-      '@typescript-eslint/eslint-plugin':
-        specifier: latest
-        version: 8.43.0(@typescript-eslint/parser@8.43.0)(eslint@8.57.1)(typescript@5.9.2)
-      '@typescript-eslint/parser':
-        specifier: latest
-        version: 8.43.0(eslint@8.57.1)(typescript@5.9.2)
-      eslint:
-        specifier: '*'
-        version: 8.57.1
-      eslint-config-prettier:
-        specifier: latest
-        version: 10.1.8(eslint@8.57.1)
-      eslint-plugin-import:
-        specifier: latest
-        version: 2.32.0(@typescript-eslint/parser@8.43.0)(eslint@8.57.1)
-      eslint-plugin-import-helpers:
-        specifier: latest
-        version: 2.0.1(eslint@8.57.1)
-      eslint-plugin-jsx-a11y:
-        specifier: latest
-        version: 6.10.2(eslint@8.57.1)
-      eslint-plugin-n:
-        specifier: latest
-        version: 17.21.3(eslint@8.57.1)(typescript@5.9.2)
-      eslint-plugin-promise:
-        specifier: latest
-        version: 7.2.1(eslint@8.57.1)
-      eslint-plugin-react:
-        specifier: latest
-        version: 7.37.5(eslint@8.57.1)
-      eslint-plugin-react-hooks:
-        specifier: latest
-        version: 5.2.0(eslint@8.57.1)
-      eslint-plugin-react-native-a11y:
-        specifier: latest
-        version: 3.5.1(eslint@8.57.1)
-      eslint-plugin-tailwindcss:
-        specifier: latest
-        version: 3.18.2(tailwindcss@3.4.17)
-      typescript:
-        specifier: '*'
-        version: 5.9.2
-
-  packages/tsconfig: {}
-
-  packages/ui:
+  packages/design-system:
     dependencies:
       '@fastify/deepmerge':
         specifier: ^1.3.0
@@ -248,12 +198,6 @@ importers:
       tailwind-merge:
         specifier: ^1.14.0
         version: 1.14.0
-      tailwind-variants:
-        specifier: ^0.1.14
-        version: 0.1.20(tailwindcss@3.4.17)
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.17)
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -322,7 +266,7 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2(rollup@4.50.1)
       tailwindcss:
-        specifier: ^3.4.0
+        specifier: ^3.4.0 || ^4.0.0
         version: 3.4.17(ts-node@10.9.2)
       ts-node:
         specifier: ^10.9.2
@@ -339,6 +283,56 @@ importers:
       zod:
         specifier: ^3.22.4
         version: 3.25.76
+
+  packages/eslint-config:
+    dependencies:
+      '@next/eslint-plugin-next':
+        specifier: latest
+        version: 15.5.2
+      '@typescript-eslint/eslint-plugin':
+        specifier: latest
+        version: 8.43.0(@typescript-eslint/parser@8.43.0)(eslint@8.57.1)(typescript@5.9.2)
+      '@typescript-eslint/parser':
+        specifier: latest
+        version: 8.43.0(eslint@8.57.1)(typescript@5.9.2)
+      eslint:
+        specifier: '*'
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: latest
+        version: 10.1.8(eslint@8.57.1)
+      eslint-plugin-import:
+        specifier: latest
+        version: 2.32.0(@typescript-eslint/parser@8.43.0)(eslint@8.57.1)
+      eslint-plugin-import-helpers:
+        specifier: latest
+        version: 2.0.1(eslint@8.57.1)
+      eslint-plugin-jsx-a11y:
+        specifier: latest
+        version: 6.10.2(eslint@8.57.1)
+      eslint-plugin-n:
+        specifier: latest
+        version: 17.21.3(eslint@8.57.1)(typescript@5.9.2)
+      eslint-plugin-promise:
+        specifier: latest
+        version: 7.2.1(eslint@8.57.1)
+      eslint-plugin-react:
+        specifier: latest
+        version: 7.37.5(eslint@8.57.1)
+      eslint-plugin-react-hooks:
+        specifier: latest
+        version: 5.2.0(eslint@8.57.1)
+      eslint-plugin-react-native-a11y:
+        specifier: latest
+        version: 3.5.1(eslint@8.57.1)
+      eslint-plugin-tailwindcss:
+        specifier: latest
+        version: 3.18.2(tailwindcss@3.4.17)
+      typescript:
+        specifier: '*'
+        version: 5.9.2
+
+  packages/tsconfig: {}
 
 packages:
 
@@ -12677,24 +12671,6 @@ packages:
 
   /tailwind-merge@1.14.0:
     resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
-    dev: false
-
-  /tailwind-variants@0.1.20(tailwindcss@3.4.17):
-    resolution: {integrity: sha512-AMh7x313t/V+eTySKB0Dal08RHY7ggYK0MSn/ad8wKWOrDUIzyiWNayRUm2PIJ4VRkvRnfNuyRuKbLV3EN+ewQ==}
-    engines: {node: '>=16.x', pnpm: '>=7.x'}
-    peerDependencies:
-      tailwindcss: '*'
-    dependencies:
-      tailwind-merge: 1.14.0
-      tailwindcss: 3.4.17(ts-node@10.9.2)
-    dev: false
-
-  /tailwindcss-animate@1.0.7(tailwindcss@3.4.17):
-    resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
-    peerDependencies:
-      tailwindcss: '>=3.0.0 || insiders'
-    dependencies:
-      tailwindcss: 3.4.17(ts-node@10.9.2)
     dev: false
 
   /tailwindcss@3.4.17(ts-node@10.9.2):

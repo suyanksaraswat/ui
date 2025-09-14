@@ -1,6 +1,6 @@
 import type React from "react";
 
-import { cn } from "@suyanksaraswat/ui";
+import { cn } from "@suyanksaraswat/design-system/cn";
 
 import { hslToColors } from "~/utils/colors";
 

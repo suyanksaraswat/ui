@@ -1,4 +1,4 @@
-import sharedConfig from "@suyanksaraswat/ui/tailwind.config.ts";
+import sharedConfig from "@suyanksaraswat/design-system/tailwind.config.ts";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -6,7 +6,7 @@ const config: Config = {
   content: [
     "./src/stories/**/*.stories.{tsx,mdx}",
     "./src/components/*.tsx",
-    "../../packages/ui/src/**/*.{ts,tsx}",
+    "../../packages/design-system/src/**/*.{ts,tsx}",
   ],
 };
 

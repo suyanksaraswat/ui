@@ -1,12 +1,12 @@
 {
-  "name": "@suyanksaraswat/ui",
-  "version": "9.0.0",
+  "name": "@suyanksaraswat/design-system",
+  "version": "0.0.1",
   "description": "An accessible and customizable component library powered by shadcn/ui",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/suyanksaraswat/ui",
-    "directory": "packages/ui"
+    "directory": "packages/design-system"
   },
   "keywords": [
     "react",
@@ -115,6 +115,6 @@
     }
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   }
 }
